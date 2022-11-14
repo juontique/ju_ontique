@@ -1,0 +1,74 @@
+<html>
+<head><title>정보과학</title>
+
+</head>
+<body>
+
+<script>
+function fsum() {
+var n1 = frm2.num1.value;
+var n2 = frm2.num2.value;
+var res = Number(n1) + Number(n2);
+frm2.result.value = res;
+}
+function fdif() {
+var n1 = frm2.num1.value;
+var n2 = frm2.num2.value;
+var res = Number(n1) - Number(n2);
+frm2.result.value = res;
+}
+function fprod() {
+var n1 = frm2.num1.value;
+var n2 = frm2.num2.value;
+var res = Number(n1) * Number(n2);
+frm2.result.value = res;
+}
+function fdiv() {
+var n1 = frm2.num1.value;
+var n2 = frm2.num2.value;
+var res = Number(n1) / Number(n2);
+frm2.result.value = res;
+}
+</script>
+
+<h2> 계산기 </h2>
+<form name="frm2">
+숫자1: <input type="text" size="2" name="num1"><br>
+숫자2: <input type="text" size="2" name="num2"><br>
+<input type="button" value="+" onClick="fsum()">
+<input type="button" value="-" onClick="fdif()">
+<input type="button" value="×" onClick="fprod()">
+<input type="button" value="÷" onClick="fdiv()">
+
+<br>
+결과: <input type="text" size="5" name="result">
+</form>
+
+
+<h3>document.write() 활용</h3>
+<hr>
+<script>
+document.write('<h3>Welcome!</h3>');
+</script>
+
+<script>
+function pwChk() {
+var txtPw = frm1.pw.value;
+if(txtPw == "04260305") {
+document.location.href="https://www.snu.ac.kr/";
+}
+else {
+document.write("당신은 학생이 아니므로 사이트로 접속할 수 없습니다.");
+}
+}
+</script>
+
+<h3> 암호 확인 </h3>
+<form name="frm1">
+이름 : <input type="text"><br>
+암호 : <input type="password" name="pw">
+<input type="button" value="확인" onclick="pwChk()"><br>
+자소서: <textarea cols="50" row="10"></textarea>
+</form>
+</body>
+</html>
